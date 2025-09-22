@@ -1,32 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script defer src="face-api.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
   <title>Face Recognition</title>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: #111;
-      color: #fff;
-      margin: 0;
-      padding: 20px;
-    }
-    video, canvas {
-      border: 2px solid #0f0;
-      border-radius: 8px;
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h2>Face Recognition Demo</h2>
-  <video id="video" width="720" height="560" autoplay muted playsinline></video>
+  <div id="container">
+    <video id="video" width="720" height="560" autoplay muted></video>
+    <canvas id="overlay" width="720" height="560"></canvas>
+  </div>
+
+  <!-- Load face-api.js and your script -->
+  <script defer src="face-api.min.js"></script>
   <script defer src="face.js"></script>
 </body>
 </html>
